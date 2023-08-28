@@ -1,7 +1,16 @@
-snippet lorem
-test
-endsnippet
+__  ___ _   _______ _____  _    _ _   _   _____ _   _ _________________ _____ _____ _____
+|  \/  || | / /  _  \  _  || |  | | \ | | /  ___| \ | |_   _| ___ \ ___ \  ___|_   _/  ___|
+| .  . || |/ /| | | | | | || |  | |  \| | \ `--.|  \| | | | | |_/ / |_/ / |__   | | \ `--.
+| |\/| ||    \| | | | | | || |/\| | . ` |  `--. \ . ` | | | |  __/|  __/|  __|  | |  `--. \
+| |  | || |\  \ |/ /\ \_/ /\  /\  / |\  | /\__/ / |\  |_| |_| |   | |   | |___  | | /\__/ /
+\_|  |_/\_| \_/___/  \___/  \/  \/\_| \_/ \____/\_| \_/\___/\_|   \_|   \____/  \_/ \____/
 
+# Quickly build docs by inserting a word or phrase in your doc, then press tab
+# to complete the rest of the snippet.
+
+# ----------------------------------------------------------------------------
+# REQUIRED
+# ----------------------------------------------------------------------------
 snippet frontmatter
 ---
 slug: [TODO]
@@ -14,18 +23,89 @@ tags:
 ---
 endsnippet
 
+# ----------------------------------------------------------------------------
+# RELEASE NOTES
+# ----------------------------------------------------------------------------
+
+snippet release-notes-frontmatter
+---
+slug: MONTH-2023
+append_help_link: true
+hide_title: true
+description: >-
+  Release notes include the changes, fixes, and additions in specific versions of Semgrep.
+toc_max_heading_level: 3
+---
+endsnippet
+
+snippet release-notes-template
+# [todoMONTH] 2023 release notes
+
+## Semgrep OSS Engine
+
+This section of release notes includes upgrades of Semgrep OSS Engine for versions between **todo** and **todo**.
+
+### Added
+
+### Fixed
+
+### Changed
+
+### Removed
+
+endsnippet
+
+snippet release-notes-subsections
+### Added
+
+### Changed
+
+### Fixed
+
+endsnippet
+
+snippet release-notes-products
+## Semgrep OSS Engine
+
+## Semgrep Cloud Platform
+
+## Semgrep Code
+
+## Semgrep Supply Chain
+
+## Documentation and knowledgebase updates
+
+endsnippet
+
+snippet pr-link
+([#$1NUMBER](https://github.com/returntocorp/semgrep/issues/NUMBER))
+endsnippet
+
+# ----------------------------------------------------------------------------
+# EDITING SYMBOLS AND CONVENIENCE SNIPPETS
+# ----------------------------------------------------------------------------
+
 snippet tk
 [TODO]
 endsnippet
 
 snippet fig
-*Figure N.* $1DESC
+*Figure .* $1DESC
 endsnippet
 
 snippet link
 [$1LINK_TEXT](ANCHOR)
 endsnippet
 
+snippet 2-col
+| $1header | header |
+| -------  | ------ |
+|          |        |
+endsnippet
+
+# ----------------------------------------------------------------------------
+# IMAGES
+# ----------------------------------------------------------------------------
 snippet img-link
 ![DESCRIPTION](/img/$1PNG_FILE.png)
 endsnippet
@@ -38,34 +118,10 @@ snippet img-link-md-width
 ![DESCRIPTION](/img/$1PNG_FILE.png#md-width)
 endsnippet
 
-snippet 2-col
-| $1header | header |
-| -------  | ------ |
-|          |        |
-endsnippet
 
-snippet prerequisites
-:::info prerequisites
-$1
-:::
-endsnippet
-
-
-snippet sign-in-up-semgrep
-[Sign up or sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
-endsnippet
-
-snippet sign-in-semgrep
-[Sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
-endsnippet
-
-snippet link-supply-chain
-https://semgrep.dev/orgs/-/supply-chain
-endsnippet
-
-snippet link-semgrep-slack
-https://go.semgrep.dev/slack
-endsnippet
+# ----------------------------------------------------------------------------
+# EMOJIS AND ICONS
+# ----------------------------------------------------------------------------
 
 snippet :x:
 ❌
@@ -75,12 +131,6 @@ snippet :check:
 ✔️
 endsnippet
 
-snippet scp-prereq
-:::info Prerequisites
-* [FEATURE] can be accessed through Semgrep Cloud Platform (SCP). [Create an account](/semgrep-code/getting-started/#signing-in-to-semgrep-cloud-platform) to set up Slack notifications.
-* To [VERB_WITH_FEATURE], you must [add or onboard a project](/semgrep-code/getting-started/#option-b-adding-a-repository-from-github-gitlab-or-bitbucket) (repository) to Semgrep Cloud Platform for scanning.
-:::
-endsnippet
 
 snippet icon-gear
 <i class="fa-solid fa-gear"></i>
@@ -94,18 +144,13 @@ snippet icon-horiz-dots
 <i class="fas fa-ellipsis-h"></i>
 endsnippet
 
-snippet mailto
-[$1](mailto:)
-endsnippet
-
 snippet icon-checkbox
 <i class="fa-solid fa-square-check"></i>
 endsnippet
 
-snippet settings-link
-[Settings](https://semgrep.dev/orgs/-/settings)
-endsnippet
-
+# ----------------------------------------------------------------------------
+# USEFUL MARKDOWN
+# ----------------------------------------------------------------------------
 snippet summary
 <details><summary>$1</summary>
 
@@ -113,39 +158,13 @@ snippet summary
 </details>
 endsnippet
 
-snippet release-notes-subsections
-### Added
-
-### Changed
-
-### Fixed
-
+snippet mailto
+[$1](mailto:)
 endsnippet
 
-snippet release-notes-products
-
-## Semgrep OSS Engine
-
-## Semgrep Cloud Platform
-
-## Semgrep Code
-
-## Semgrep Supply Chain
-
-## Documentation updates
-
-endsnippet
-
-snippet release-notes-frontmatter
----
-slug: MONTH-2023
-append_help_link: true
-hide_title: true
-description: >-
-  Release notes include the changes, fixes, and additions in specific versions of Semgrep.
-toc_max_heading_level: 3
----
-endsnippet
+# ----------------------------------------------------------------------------
+# SEMGREP LINKS
+# ----------------------------------------------------------------------------
 
 snippet sg.dev-projects
 **[Projects](https://semgrep.dev/orgs/-/projects/)**
@@ -155,6 +174,45 @@ snippet sg.dev-settings
 **[Settings](https://semgrep.dev/orgs/-/settings/)**
 endsnippet
 
-snippet pr-link
-([#$1NUMBER](https://github.com/returntocorp/semgrep/issues/NUMBER))
+snippet link-supply-chain
+https://semgrep.dev/orgs/-/supply-chain
 endsnippet
+
+snippet link-semgrep-slack
+https://go.semgrep.dev/slack
+endsnippet
+
+snippet sign-in-up-semgrep
+[Sign up or sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
+endsnippet
+
+snippet sign-in-semgrep
+[Sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
+endsnippet
+
+# ----------------------------------------------------------------------------
+# CALLOUT BOXES (ADMONITIONS)
+# ----------------------------------------------------------------------------
+
+snippet prerequisites
+:::info prerequisites
+$1
+:::
+endsnippet
+
+snippet scp-prereq
+:::info Prerequisites
+* [FEATURE] can be accessed through Semgrep Cloud Platform (SCP). [Create an account](/semgrep-code/getting-started/#signing-in-to-semgrep-cloud-platform) to set up [FEATURE].
+* To [VERB_WITH_FEATURE], you must [REF LINK](LINK).
+:::
+endsnippet
+
+snippet caution
+:::caution
+$1
+:::
+
+snippet tip
+:::tip
+$1
+:::
