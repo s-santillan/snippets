@@ -1,0 +1,83 @@
+snippet lorem
+test
+endsnippet
+
+snippet frontmatter
+---
+slug: [TODO]
+append_help_link: true
+title: [TODO]
+hide_title: true
+description: [TODO]
+tags:
+  - [TODO]
+---
+endsnippet
+
+snippet tk
+[TODO]
+endsnippet
+
+snippet fig
+Figure N. $1DESC
+endsnippet
+
+snippet link
+[$1LINK_TEXT](ANCHOR)
+endsnippet
+
+snippet full-img-link
+![Screenshot...](/img/$1PNG_FILE.png)
+endsnippet
+
+snippet 2-col
+| $1header | header |
+| -------  | ------ |
+|          |        |
+endsnippet
+
+snippet prerequisites
+:::info prerequisites
+$1
+:::
+endsnippet
+
+
+snippet sign-in-up-semgrep
+[Sign up or sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
+endsnippet
+
+snippet sign-in-semgrep
+[Sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
+endsnippet
+
+snippet link-supply-chain
+https://semgrep.dev/orgs/-/supply-chain
+endsnippet
+
+snippet link-semgrep-slack
+https://go.semgrep.dev/slack
+endsnippet
+
+snippet :x:
+❌
+endsnippet
+
+snippet :check:
+✔️
+endsnippet
+
+snippet scp-prereq
+:::info Prerequisites
+* [FEATURE] can accessed through Semgrep Cloud Platform (SCP). [Create an account](/semgrep-code/getting-started/#signing-in-to-semgrep-cloud-platform) to set up Slack notifications.
+* To [VERB_WITH_FEATURE], you must [add or onboard a project](/semgrep-code/getting-started/#option-b-adding-a-repository-from-github-gitlab-or-bitbucket) (repository) to Semgrep Cloud Platform for scanning.
+:::
+endsnippet
+
+snippet icon-gear
+<i class="fa-solid fa-gear"></i>
+endsnippet
+
+snippet icon-toggle
+<i class="fa-solid fa-toggle-large-on"></i>
+endsnippet
