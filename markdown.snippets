@@ -13,15 +13,16 @@
 # ----------------------------------------------------------------------------
 snippet frontmatter
 ---
-slug: [TODO]
+slug: tk
 append_help_link: true
-title: [TODO]
+title: tk
 hide_title: true
-description: [TODO]
+description: tk
 tags:
-  - [TODO]
+  - tk
 ---
 endsnippet
+
 
 # ----------------------------------------------------------------------------
 # RELEASE NOTES
@@ -35,25 +36,19 @@ hide_title: true
 description: >-
   Release notes include the changes, fixes, and additions in specific versions of Semgrep.
 toc_max_heading_level: 3
+tags:
+  - Release notes
 ---
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet release-notes-template
 # [todoMONTH] 2023 release notes
 
-## Semgrep OSS Engine
+## 🔧 Semgrep OSS Engine
 
-This section of release notes includes upgrades of Semgrep OSS Engine for versions between **todo** and **todo**.
-
-### Added
-
-### Fixed
-
-### Changed
-
-### Removed
-
-endsnippet
+* The following versions of Semgrep OSS Engine were released in September 2023:
 
 snippet release-notes-subsections
 ### Added
@@ -64,18 +59,26 @@ snippet release-notes-subsections
 
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet release-notes-products
-## Semgrep OSS Engine
+## 🔧 Semgrep OSS Engine
 
-## Semgrep Cloud Platform
+## 🌐 Semgrep Cloud Platform
 
-## Semgrep Code
+## 💻 Semgrep Code
 
-## Semgrep Supply Chain
+## ⛓️ Semgrep Supply Chain
 
-## Documentation and knowledgebase updates
+## 🤖 Semgrep Assistant (beta)
+
+## 🔐 Semgrep Secrets (beta)
+
+## 📝 Documentation and knowledge base
 
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet pr-link
 ([#$1NUMBER](https://github.com/returntocorp/semgrep/issues/NUMBER))
@@ -89,13 +92,18 @@ snippet tk
 [TODO]
 endsnippet
 
+# -----------------------------------------------------------------------------
 snippet fig
-*Figure .* $1DESC
+*Figure.* $1DESC
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet link
 [$1LINK_TEXT](ANCHOR)
 endsnippet
+
+# -TABLES----------------------------------------------------------------------
 
 snippet 2-col
 | $1header | header |
@@ -103,16 +111,29 @@ snippet 2-col
 |          |        |
 endsnippet
 
+# -TABLES----------------------------------------------------------------------
+
+snippet 3-col
+| $1header | header | header |
+| -------  | ------ | ------ |
+|          |        |        |
+endsnippet
+
 # ----------------------------------------------------------------------------
 # IMAGES
 # ----------------------------------------------------------------------------
+
 snippet img-link
 ![DESCRIPTION](/img/$1PNG_FILE.png)
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet img-link-bordered
 ![DESCRIPTION](/img/$1PNG_FILE.png#bordered)
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet img-link-md-width
 ![DESCRIPTION](/img/$1PNG_FILE.png#md-width)
@@ -127,30 +148,58 @@ snippet :x:
 ❌
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet :check:
 ✔️
 endsnippet
 
+# -----------------------------------------------------------------------------
 
 snippet icon-gear
 <i class="fa-solid fa-gear"></i>
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet icon-toggle
 <i class="fa-solid fa-toggle-large-on"></i>
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet icon-horiz-dots
 <i class="fas fa-ellipsis-h"></i>
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet icon-checkbox
 <i class="fa-solid fa-square-check"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-extlink
+[<i class="fas fa-external-link fa-xs"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-doclink
+[<i class="fa-regular fa-file-lines"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-play
+<i class="fa-solid fa-play"></i>
 endsnippet
 
 # ----------------------------------------------------------------------------
 # USEFUL MARKDOWN
 # ----------------------------------------------------------------------------
+
 snippet summary
 <details><summary>$1</summary>
 
@@ -158,37 +207,70 @@ snippet summary
 </details>
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet mailto
-[$1](mailto:)
+[<i class="fa-regular fa-envelope"></i>$1](mailto:)
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet placeholder
+<span className="placeholder">$1</span>
 endsnippet
 
 # ----------------------------------------------------------------------------
 # SEMGREP LINKS
 # ----------------------------------------------------------------------------
 
+snippet mail-support
+[<i class="fa-regular fa-envelope"></i> support@semgrep.com](mailto:support@semgrep.com)
+
+endsnippet
+
+# -----------------------------------------------------------------------------
+
 snippet sg.dev-projects
 **[Projects](https://semgrep.dev/orgs/-/projects/)**
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet sg.dev-settings
 **[Settings](https://semgrep.dev/orgs/-/settings/)**
 endsnippet
 
-snippet link-supply-chain
+# -----------------------------------------------------------------------------
+
+snippet sg.dev-ssc
 https://semgrep.dev/orgs/-/supply-chain
 endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet sg.dev-policies
+https://semgrep.dev/orgs/-/policies
+endsnippet
+# -----------------------------------------------------------------------------
 
 snippet link-semgrep-slack
 https://go.semgrep.dev/slack
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet sign-in-up-semgrep
-[Sign up or sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
+[<i class="fas fa-external-link fa-xs"></i> Sign up or sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet sign-in-semgrep
 [Sign in to Semgrep Cloud Platform](https://semgrep.dev/login).
 endsnippet
+
+snippet support
+[Semgrep support](mailto:support@semgrep.com)
 
 # ----------------------------------------------------------------------------
 # CALLOUT BOXES (ADMONITIONS)
@@ -200,6 +282,8 @@ $1
 :::
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet scp-prereq
 :::info Prerequisites
 * [FEATURE] can be accessed through Semgrep Cloud Platform (SCP). [Create an account](/semgrep-code/getting-started/#signing-in-to-semgrep-cloud-platform) to set up [FEATURE].
@@ -207,11 +291,15 @@ snippet scp-prereq
 :::
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet caution
 :::caution
 $1
 :::
 endsnippet
+
+# -----------------------------------------------------------------------------
 
 snippet tip
 :::tip
@@ -226,6 +314,35 @@ snippet sast
 SAST (Static application security testing)
 endsnippet
 
+# -----------------------------------------------------------------------------
+
 snippet sca
 SCA (Software composition analysis)
+endsnippet
+
+
+# ----------------------------------------------------------------------------
+# IMPORT COMPONENTS
+# ----------------------------------------------------------------------------
+
+snippet import-tabs
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+endsnippet
+
+snippet add-tabitem
+<Tabs
+    defaultValue="todo"
+    values={[
+    {label: 'Default', value: 'todo'},
+    {label: '2nd tab', value: 'todo'},
+    ]}
+>
+
+<TabItem value='todo'>
+
+tk
+
+</TabItem>
+</Tabs>
 endsnippet
