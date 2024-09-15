@@ -14,7 +14,6 @@
 snippet frontmatter
 ---
 slug: tk
-append_help_link: true
 title: tk
 hide_title: true
 description: tk
@@ -31,7 +30,6 @@ endsnippet
 snippet release-notes-frontmatter
 ---
 slug: MONTH-2023
-append_help_link: true
 hide_title: true
 description: >-
   Release notes include the changes, fixes, and additions in specific versions of Semgrep.
@@ -44,13 +42,12 @@ endsnippet
 # -----------------------------------------------------------------------------
 
 snippet release-notes-template
-# [todoMONTH] 2023 release notes
+# Semgrep release notes for [todoMONTH] 2024
 
 ## 🔧 Semgrep OSS Engine
 
 * The following versions of Semgrep OSS Engine were released in September 2023:
 
-snippet release-notes-subsections
 ### Added
 
 ### Changed
@@ -62,19 +59,32 @@ endsnippet
 # -----------------------------------------------------------------------------
 
 snippet release-notes-products
-## 🔧 Semgrep OSS Engine
+## 🔧 OSS Engine
 
-## 🌐 Semgrep Cloud Platform
+The following versions of the OSS Engine were released in tkmonth tkyear:
 
-## 💻 Semgrep Code
+## 🌐 AppSec Platform
 
-## ⛓️ Semgrep Supply Chain
+## 💻 Code
 
-## 🤖 Semgrep Assistant (beta)
+## ⛓️  Supply Chain
 
-## 🔐 Semgrep Secrets (beta)
+## 🤖 Semgrep Assistant 
+
+## 🔐 Semgrep Secrets
 
 ## 📝 Documentation and knowledge base
+
+- Added the following new documents, articles and sections:
+  - DOCUMENT_NAME
+  - KB_ARTICLE_NAME
+- Minor additions and updates:
+
+Major updates have been made to the following documentation:
+Updated how the docs are organized (minor changes).
+Various documentation presentation updates.
+Minor documentation updates.
+
 
 endsnippet
 
@@ -94,13 +104,22 @@ endsnippet
 
 # -----------------------------------------------------------------------------
 snippet fig
-*Figure.* $1DESC
+_**Figure**. $1DESC_
 endsnippet
 
 # -----------------------------------------------------------------------------
 
 snippet link
 [$1LINK_TEXT](ANCHOR)
+endsnippet
+ 
+# -----------------------------------------------------------------------------
+
+snippet dldtdd
+<dl>
+<dt></dt>
+<dd></dd>
+</dl>
 endsnippet
 
 # -TABLES----------------------------------------------------------------------
@@ -124,7 +143,7 @@ endsnippet
 # ----------------------------------------------------------------------------
 
 snippet img-link
-![DESCRIPTION](/img/$1PNG_FILE.png)
+![DESCRIPTION-tk](/img/$1PNG_FILE.png)
 endsnippet
 
 # -----------------------------------------------------------------------------
@@ -151,7 +170,7 @@ endsnippet
 # -----------------------------------------------------------------------------
 
 snippet :check:
-✔️
+✅
 endsnippet
 
 # -----------------------------------------------------------------------------
@@ -180,6 +199,17 @@ endsnippet
 
 # -----------------------------------------------------------------------------
 
+snippet icon-plus
+<i class="fa-solid fa-plus"></i>
+endsnippet 
+
+# -----------------------------------------------------------------------------
+
+snippet icon-edit
+<i class="fa-solid fa-pen-to-square"></i>
+endsnippet
+# -----------------------------------------------------------------------------
+
 snippet icon-extlink
 [<i class="fas fa-external-link fa-xs"></i>
 endsnippet
@@ -194,6 +224,18 @@ endsnippet
 
 snippet icon-play
 <i class="fa-solid fa-play"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-down
+<i class="fa-solid fa-chevron-down"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-trash
+<i class="fa-solid fa-trash"></i>
 endsnippet
 
 # ----------------------------------------------------------------------------
@@ -217,6 +259,18 @@ endsnippet
 
 snippet placeholder
 <span className="placeholder">$1</span>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet codelines
+yaml showLineNumbers
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet highlight
+//highlight-next-line
 endsnippet
 
 # ----------------------------------------------------------------------------
@@ -284,15 +338,6 @@ endsnippet
 
 # -----------------------------------------------------------------------------
 
-snippet scp-prereq
-:::info Prerequisites
-* [FEATURE] can be accessed through Semgrep Cloud Platform (SCP). [Create an account](/semgrep-code/getting-started/#signing-in-to-semgrep-cloud-platform) to set up [FEATURE].
-* To [VERB_WITH_FEATURE], you must [REF LINK](LINK).
-:::
-endsnippet
-
-# -----------------------------------------------------------------------------
-
 snippet caution
 :::caution
 $1
@@ -306,6 +351,16 @@ snippet tip
 $1
 :::
 endsnippet
+
+
+# ----------------------------------------------------------------------------
+# EMBEDDITOR 
+# ----------------------------------------------------------------------------
+
+snippet embedditor
+<iframe title="Semgrep example no prints" src="https://semgrep.dev/embed/editor?snippet=KPzL" width="100%" height="432px" frameBorder="0"></iframe>
+endsnippet
+
 # ----------------------------------------------------------------------------
 # ACRONYMS
 # ----------------------------------------------------------------------------
@@ -346,3 +401,9 @@ tk
 </TabItem>
 </Tabs>
 endsnippet
+
+snippet importComponent
+<componentname prop='' />
+endsnippet
+
+
