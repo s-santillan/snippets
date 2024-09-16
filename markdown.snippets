@@ -1,4 +1,4 @@
-# __  ___ _   _______ _____  _    _ _   _   _____ _   _ _________________ _____ _____ _____
+#  __  ___ _   _______ _____  _    _ _   _   _____ _   _ _________________ _____ _____ _____
 # |  \/  || | / /  _  \  _  || |  | | \ | | /  ___| \ | |_   _| ___ \ ___ \  ___|_   _/  ___|
 # | .  . || |/ /| | | | | | || |  | |  \| | \ `--.|  \| | | | | |_/ / |_/ / |__   | | \ `--.
 # | |\/| ||    \| | | | | | || |/\| | . ` |  `--. \ . ` | | | |  __/|  __/|  __|  | |  `--. \
@@ -28,7 +28,7 @@ endsnippet
 # RELEASE NOTES
 # ----------------------------------------------------------------------------
 
-snippet release-notes-frontmatter
+snippet release-frontmatter
 ---
 slug: MONTH-2023
 append_help_link: true
@@ -43,14 +43,18 @@ endsnippet
 
 # -----------------------------------------------------------------------------
 
-snippet release-notes-template
+snippet release-template
 # [todoMONTH] 2023 release notes
+
+<!-- Remember to update latest endpoint -->
 
 ## 🔧 Semgrep OSS Engine
 
 * The following versions of Semgrep OSS Engine were released in September 2023:
 
-snippet release-notes-subsections
+endsnippet
+
+snippet release-subsections
 ### Added
 
 ### Changed
@@ -61,7 +65,7 @@ endsnippet
 
 # -----------------------------------------------------------------------------
 
-snippet release-notes-products
+snippet release-products
 ## 🔧 Semgrep OSS Engine
 
 ## 🌐 Semgrep Cloud Platform
@@ -180,6 +184,30 @@ endsnippet
 
 # -----------------------------------------------------------------------------
 
+snippet icon-bullhorn
+<i class="fa-solid fa-bullhorn"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-key
+<i class="fa-solid fa-key"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-hourglass
+<i class="fa-solid fa-hourglass-half"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
+snippet icon-openfolder
+<i class="fa-solid fa-folder-open"></i>
+endsnippet
+
+# -----------------------------------------------------------------------------
+
 snippet icon-extlink
 [<i class="fas fa-external-link fa-xs"></i>
 endsnippet
@@ -196,6 +224,11 @@ snippet icon-play
 <i class="fa-solid fa-play"></i>
 endsnippet
 
+# -----------------------------------------------------------------------------
+
+snippet icon-gem
+<i class="fa-solid fa-gem"></i>
+endsnippet
 # ----------------------------------------------------------------------------
 # USEFUL MARKDOWN
 # ----------------------------------------------------------------------------
@@ -345,4 +378,8 @@ tk
 
 </TabItem>
 </Tabs>
+endsnippet
+
+snippet import-registry
+<LinkToRegistryRule ruleId="go.lang.security.audit.xss.import-text-template.import-text-template" />
 endsnippet
